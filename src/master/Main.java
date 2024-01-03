@@ -1,5 +1,6 @@
 package master;
 
+import develop.ConvertService;
 
 import java.util.Scanner;
 
@@ -20,6 +21,7 @@ public class Main {
         System.out.println("""
                 Choose an option:
                 1 - get convert mph/kmh.
+                2 - get convert kmh/mph.
                 0 - close the app.
                 """);
     }
@@ -38,7 +40,13 @@ public class Main {
                 output = service.convMphToKmh(num1);
                 System.out.println("You result " + output + " kmh");
             }
-
+            case 2 -> {
+                ConvertService service = new ConvertService();
+                System.out.print("Enter kmh ");
+                num1 = scanner.nextDouble();
+                output = service.convKmhToMph(num1);
+                System.out.println("You result " + output + " mph");
+            }
             case 0 -> {
                 System.out.println("App's closed.");
                 scanner.close();
