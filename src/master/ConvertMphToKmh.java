@@ -14,5 +14,4 @@ public class ConvertMphToKmh {
     String roundRes(double res) {
         return Rounder.roundValue(res);
     }
-
 }
